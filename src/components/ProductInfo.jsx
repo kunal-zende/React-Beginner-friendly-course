@@ -1,13 +1,19 @@
 const ProductInfo = () => {
-    const info = {
-        name : "Laptop",
-        price : 1000,
-    }
+    const products = [
+        { id: 1, name : "laptop", price : 100000},
+        { id: 2, name : "Iphone", price : 30000},
+        { id: 3, name : "Charger", price : 2000},
+    ]
 
     return (
-        <div>
-            <p>Name : {info.name}</p>
-            <p>Price : {info.price}</p>
+        <div >
+            {products.map((p) => (
+                <div key={p.id}>
+                    <h1>Name : {p.name}</h1>
+                    <h2>Price : {p.price}</h2>
+                </div>
+            ))}
+           
         </div>
     );
 }
