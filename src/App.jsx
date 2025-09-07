@@ -1,12 +1,26 @@
-import Person from "./components/Person";
-import Product from "./components/Product";
+// Conditional rendering 
+
+const ValidPassword = () => {
+  return(
+    <h1>Valid password</h1>
+  );
+}
+
+const InvalidPassword = () => {
+  return <h1>Invalid Password</h1>
+}
+
+const Password = ({isValid}) =>{
+  if(isValid) {
+   return <ValidPassword/>
+  } else {
+   return <InvalidPassword/>
+  }
+}
 
 const App = () => {
-  return (
-  <div>
-  <Person name="Kunal" age={22} />
-  <Product name="Iphone" price={60000} />
-  </div>
+  return(
+    <Password isValid={false} />
   );
 }
 
