@@ -1,26 +1,12 @@
-// Conditional rendering 
-
-const ValidPassword = () => {
-  return(
-    <h1>Valid password</h1>
-  );
-}
-
-const InvalidPassword = () => {
-  return <h1>Invalid Password</h1>
-}
-
-const Password = ({isValid}) =>{
-  if(isValid) {
-   return <ValidPassword/>
-  } else {
-   return <InvalidPassword/>
-  }
-}
+import Greeting from "./components/Greeting";
+import UserStatus from "./components/UserStatus";
+import Weather from "./components/Weather";
 
 const App = () => {
   return(
-    <Password isValid={false} />
+    // <Weather temperature={27}/>
+    // <UserStatus loggedIn={false} isAdmin={true}/>
+    <Greeting timeOfDay={"mornin"}/>
   );
 }
 
